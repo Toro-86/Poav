@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url('background1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  animation: glow 2s infinite alternate;
+}
+
+.prank-section {
+  margin-top: 50px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  background: linear-gradient(to right, #ff0, #f90);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff6;
+}
+
+button img.red-envelope {
+  width: 40px;
+  height: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+#surprise-section img {
+  max-width: 80%;
+  animation: bounceLeftRight 5s infinite;
+}
+
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff6, 0 0 20px #ff6;
+  }
+  to {
+    text-shadow: 0 0 20px #f00, 0 0 30px #f00;
+  }
+}
+
+@keyframes bounceLeftRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-30px);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  75% {
+    transform: translateX(-30px);
+  }
+}
